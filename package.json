@@ -1,0 +1,33 @@
+{
+  "name": "pothos-query-generator",
+  "version": "0.0.1",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
+  },
+  "description": "Plugin to output 'query.graphql' from pothos to file",
+  "scripts": {
+    "build": "tsc && tsc --project ./tsconfig.esm.json && cpy esm dist",
+    "test": "jest"
+  },
+  "license": "MIT",
+  "keywords": [
+    "graphql",
+    "pothos",
+    "schema.graphql"
+  ],
+  "author": "SoraKumo",
+  "devDependencies": {
+    "@pothos/core": "^3.38.0",
+    "@types/node": "^20.8.4",
+    "cpy-cli": "^5.0.0",
+    "graphql": "^16.8.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "graphql-auto-query": "^0.0.6"
+  },
+  "repository": "https://github.com/node-libraries/pothos-query-generator"
+}
